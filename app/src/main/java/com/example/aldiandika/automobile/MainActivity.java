@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
         yes = (TextView)findViewById(R.id.yes);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        //baru
     }
 
 }
