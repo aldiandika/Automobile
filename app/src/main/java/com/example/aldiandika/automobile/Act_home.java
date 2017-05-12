@@ -1,12 +1,16 @@
 package com.example.aldiandika.automobile;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
 
 public class Act_home extends AppCompatActivity {
 
     View decorView;
+    ImageView btn_repair;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -14,6 +18,19 @@ public class Act_home extends AppCompatActivity {
         setContentView(R.layout.activity_act_home);
 
         decorView = getWindow().getDecorView();
+
+        btn_repair = (ImageView) findViewById(R.id.btn_repair);
+    }
+
+    public void toRepair(View view){
+        Intent intent = new Intent(this,Act_repair1.class);
+        startActivity(intent);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
     }
 
     @Override

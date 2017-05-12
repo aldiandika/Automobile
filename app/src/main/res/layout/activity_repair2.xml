@@ -17,82 +17,38 @@
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="157dp"
+                android:layout_height="70dp"
                 android:layout_gravity="top"
-                android:scaleType="centerCrop"
-                android:src="@drawable/banner" />
+                android:src="@drawable/request_atas2" />
 
-            <ImageView
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="125dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/main_bawahban"/>
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:padding="18dp"
+                android:text="Select the Detail Problem"
+                android:textSize="16sp"
+                android:gravity="center_horizontal"
+                android:textColor="#f9bf3b"/>
+
+
 
         </LinearLayout>
 
-        <ScrollView
+        <ListView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center_horizontal"
-                    android:scaleType="centerCrop"
-                    android:layout_marginTop="2dp"
-                    android:layout_marginBottom="2dp"
-                    android:src="@drawable/main_card"/>
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center_horizontal"
-                    android:scaleType="centerCrop"
-                    android:layout_marginTop="2dp"
-                    android:layout_marginBottom="2dp"
-                    android:src="@drawable/main_card"/>
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center_horizontal"
-                    android:scaleType="centerCrop"
-                    android:layout_marginTop="2dp"
-                    android:layout_marginBottom="2dp"
-                    android:src="@drawable/main_card"/>
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center_horizontal"
-                    android:scaleType="centerCrop"
-                    android:layout_marginTop="2dp"
-                    android:layout_marginBottom="2dp"
-                    android:src="@drawable/main_card"/>
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center_horizontal"
-                    android:scaleType="centerCrop"
-                    android:layout_marginTop="2dp"
-                    android:layout_marginBottom="2dp"
-                    android:src="@drawable/main_card"/>
+            android:layout_height="match_parent"
+            android:background="#FFFFFF">
 
 
-            </LinearLayout>
+        </ListView>
 
 
-        </ScrollView>
     </LinearLayout>
 
 
     <LinearLayout
+        android:id="@+id/layout_navi"
         android:layout_width="match_parent"
         android:layout_height="65dp"
         android:orientation="horizontal"
@@ -112,8 +68,7 @@
                 android:id="@+id/btn_repair"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
-                android:src="@drawable/logo_repair"
-                android:onClick="toRepair"/>
+                android:src="@drawable/logo_repair"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -211,6 +166,27 @@
         </LinearLayout>
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/atas"
+        android:layout_above="@id/layout_navi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
 
+        <Button
+
+            android:id="@+id/toSummary"
+            android:layout_width="250dp"
+            android:layout_height="32dp"
+            android:layout_margin="16dp"
+            android:background="@drawable/btn_rounded"
+            android:text="Proceed to summary"
+            android:textSize="12dp"
+            android:elevation="12dp"
+            android:textColor="#FFFFFF"
+            android:onClick="keTiga"/>
+
+    </LinearLayout>
 
 </RelativeLayout>

@@ -5,21 +5,22 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
-public class Act_repair1 extends AppCompatActivity {
+public class Act_repair4 extends AppCompatActivity {
 
-    Button toDetail;
+    ImageView btn_menu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_repair1);
+        setContentView(R.layout.activity_repair4);
 
-        toDetail = (Button) findViewById(R.id.toDetail);
+        btn_menu = (ImageView) findViewById(R.id.btn_menu);
     }
 
-    public void keDua(View view){
-        Intent intent = new Intent(this,Act_repair2.class);
+    public void halMain(View view){
+        Intent intent = new Intent(this,Act_home.class);
         startActivity(intent);
     }
 }

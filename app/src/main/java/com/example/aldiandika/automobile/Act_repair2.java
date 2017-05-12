@@ -6,20 +6,20 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class Act_repair1 extends AppCompatActivity {
+public class Act_repair2 extends AppCompatActivity {
 
-    Button toDetail;
+    Button toSummary;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_repair1);
+        setContentView(R.layout.activity_repair2);
 
-        toDetail = (Button) findViewById(R.id.toDetail);
+        toSummary = (Button) findViewById(R.id.toSummary);
     }
 
-    public void keDua(View view){
-        Intent intent = new Intent(this,Act_repair2.class);
+    public void keTiga(View view){
+        Intent intent = new Intent(this,Act_repair3.class);
         startActivity(intent);
     }
 }
