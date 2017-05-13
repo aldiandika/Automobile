@@ -4,13 +4,16 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ListView;
 
 public class Act_home extends AppCompatActivity {
 
     View decorView;
     ImageView btn_repair;
+    ListView list1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +23,8 @@ public class Act_home extends AppCompatActivity {
         decorView = getWindow().getDecorView();
 
         btn_repair = (ImageView) findViewById(R.id.btn_repair);
+        list1 = (ListView) findViewById(R.id.list1);
+
     }
 
     public void toRepair(View view){
@@ -45,4 +50,5 @@ public class Act_home extends AppCompatActivity {
                             | View.SYSTEM_UI_FLAG_FULLSCREEN // hide status bar
                             | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);}
     }
+
 }
