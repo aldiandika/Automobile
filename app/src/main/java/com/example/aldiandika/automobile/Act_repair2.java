@@ -3,12 +3,17 @@ package com.example.aldiandika.automobile;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
 
 public class Act_repair2 extends AppCompatActivity {
 
     Button toSummary;
+    RecyclerView recyclerViewB;
+    RecyclerView.LayoutManager layoutManagerB;
+    RecyclerView.Adapter adapterB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,6 +21,14 @@ public class Act_repair2 extends AppCompatActivity {
         setContentView(R.layout.activity_repair2);
 
         toSummary = (Button) findViewById(R.id.toSummary);
+
+        recyclerViewB = (RecyclerView) findViewById(R.id.list2);
+
+        layoutManagerB = new LinearLayoutManager(this);
+        recyclerViewB.setLayoutManager(layoutManagerB);
+
+        adapterB = new RecyclerAdapterB();
+        recyclerViewB.setAdapter(adapterB);
     }
 
     public void keTiga(View view){
