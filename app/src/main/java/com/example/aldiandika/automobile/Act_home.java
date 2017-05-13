@@ -19,6 +19,7 @@ public class Act_home extends AppCompatActivity {
     RecyclerView recyclerViewH;
     RecyclerView.LayoutManager layoutManagerH;
     RecyclerView.Adapter adapterH;
+    ImageView direk;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +29,7 @@ public class Act_home extends AppCompatActivity {
         decorView = getWindow().getDecorView();
 
         btn_repair = (LinearLayout) findViewById(R.id.btn_repair);
+        direk = (ImageView) findViewById(R.id.direk);
 
         recyclerViewH = (RecyclerView) findViewById(R.id.tampil);
 
@@ -42,6 +44,11 @@ public class Act_home extends AppCompatActivity {
 
     public void toRepair(View view){
         Intent intent = new Intent(this,Act_repair1.class);
+        startActivity(intent);
+    }
+
+    public void toDirect(View view){
+        Intent intent = new Intent(this,Act_direct.class);
         startActivity(intent);
     }
 
