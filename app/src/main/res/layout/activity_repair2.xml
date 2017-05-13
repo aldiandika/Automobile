@@ -2,7 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFFFFF">
 
 
     <LinearLayout
@@ -40,10 +41,9 @@
         <android.support.v7.widget.RecyclerView
             android:id="@+id/list2"
             android:layout_width="match_parent"
-            android:layout_height="191dp"
+            android:layout_height="322dp"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
-            android:background="#FFFFFF"
-            android:layout_weight="0.49" />
+            android:background="#FFFFFF" />
     </LinearLayout>
 
 
