@@ -1,44 +1,50 @@
 package com.example.aldiandika.automobile;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 
-public class LoginAct extends Activity {
+public class Act_repair2 extends AppCompatActivity {
 
+    Button toSummary;
+    RecyclerView recyclerViewB;
+    RecyclerView.LayoutManager layoutManagerB;
+    RecyclerView.Adapter adapterB;
     View decorView;
-    EditText editText_pass;
-    Button submit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_repair2);
 
         decorView = getWindow().getDecorView();
 
-        submit = (Button) findViewById(R.id.submit);
-        editText_pass = (EditText) findViewById(R.id.editText_pass);
-        editText_pass.setTransformationMethod(new AsteriskPasswordTransformationMethod());
+        toSummary = (Button) findViewById(R.id.toSummary);
+
+        recyclerViewB = (RecyclerView) findViewById(R.id.list2);
+
+        layoutManagerB = new LinearLayoutManager(this);
+        recyclerViewB.setLayoutManager(layoutManagerB);
+
+        adapterB = new RecyclerAdapterB();
+        recyclerViewB.setAdapter(adapterB);
     }
 
-    public void halMain(View view){
-        Intent intent = new Intent(this,Act_home.class);
+    public void keTiga(View view){
+        Intent intent = new Intent(this,Act_repair3.class);
         startActivity(intent);
     }
-
 
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
         if (hasFocus) {
             decorView.setSystemUiVisibility(
-                    View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                            | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                    View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
                             | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
                             | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION // hide nav bar
                             | View.SYSTEM_UI_FLAG_FULLSCREEN // hide status bar
