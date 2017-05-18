@@ -10,7 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1.5"
+        android:layout_weight="1"
         android:orientation="vertical"
         android:background="#ececec">
 
@@ -21,213 +21,219 @@
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="157dp"
+                android:layout_height="200dp"
                 android:layout_gravity="top"
                 android:scaleType="centerCrop"
                 android:src="@drawable/banner" />
 
-            <ImageView
-                android:id="@+id/direk"
-                android:layout_width="match_parent"
-                android:layout_height="125dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/main_bawahban"
-                android:onClick="toDirect"/>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/main_bawahban" />
+
+                <ImageView
+                    android:id="@+id/direk"
+                    android:layout_width="110dp"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="60dp"
+                    android:layout_marginEnd="60dp"
+                    android:layout_marginTop="110dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:onClick="toDirect"/>
+            </RelativeLayout>
+
 
         </LinearLayout>
 
     </LinearLayout>
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/tampil"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1.5"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        android:background="#FFFFFF" />
-
-
-
-
+    <!--bawah-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:orientation="horizontal"
+        android:layout_height="230dp"
+        android:orientation="vertical"
         android:layout_gravity="bottom"
         android:gravity="center_vertical"
-        android:background="@color/colorPrimary">
+        android:background="#ececec">
 
         <LinearLayout
-            android:id="@+id/btn_repair"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
             android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="4dp"
-            android:orientation="vertical"
-            android:onClick="toRepair">
+            android:orientation="horizontal">
 
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:src="@drawable/logo_repair" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@color/colorPrimary">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:textSize="10sp"
-                android:text="Repair"
-                android:textColor="#FFFFFF"/>
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@color/colorPrimary"
+                    android:src="@drawable/logo_repair" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Repair"
+                    android:textAllCaps="true"
+                    android:textColor="#f9bf3b"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginStart="1dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginRight="1dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@color/colorPrimary">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@color/colorPrimary"
+                    android:src="@drawable/logo_lub" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Lubricant"
+                    android:textAllCaps="true"
+                    android:textColor="#f9bf3b"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@color/colorPrimary">
+
+                <ImageView
+                    android:layout_width="55dp"
+                    android:layout_height="40dp"
+                    android:background="@color/colorPrimary"
+                    android:src="@drawable/logo_breakdown" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Breakdown"
+                    android:textAllCaps="true"
+                    android:textColor="#f9bf3b"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
             android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="4dp"
-            android:orientation="vertical">
+            android:layout_marginTop="1dp"
+            android:orientation="horizontal">
 
-            <ImageView
-                android:id="@+id/btn_lub"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:src="@drawable/logo_lub"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@color/colorPrimary">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:textSize="10sp"
-                android:text="Lubricant"
-                android:textColor="#FFFFFF"/>
-        </LinearLayout>
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@color/colorPrimary"
+                    android:src="@drawable/logo_garage" />
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="4dp"
-            android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Garage"
+                    android:textAllCaps="true"
+                    android:textColor="#f9bf3b"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
 
-            <ImageView
-                android:id="@+id/btn_break"
-                android:layout_width="38dp"
-                android:layout_height="20dp"
-                android:src="@drawable/logo_breakdown"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginStart="1dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginRight="1dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@color/colorPrimary">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:text="Breakdown"
-                android:textSize="10sp"
-                android:textColor="#FFFFFF"/>
-        </LinearLayout>
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@color/colorPrimary"
+                    android:src="@drawable/logo_market" />
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="4dp"
-            android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Marketplace"
+                    android:textAllCaps="true"
+                    android:textColor="#f9bf3b"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
 
-            <ImageView
-                android:id="@+id/btn_garage"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:src="@drawable/logo_garage"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@color/colorPrimary">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:text="Garage"
-                android:textSize="10sp"
-                android:textColor="#FFFFFF"/>
-        </LinearLayout>
+                <ImageView
+                    android:layout_width="55dp"
+                    android:layout_height="40dp"
+                    android:background="@color/colorPrimary"
+                    android:src="@drawable/logo_account" />
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="4dp"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/btn_menu"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/logo_menu"/>
-
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Account"
+                    android:textAllCaps="true"
+                    android:textColor="#f9bf3b"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
 
         </LinearLayout>
     </LinearLayout>
-
-
-
 </LinearLayout>
-
-<!--<ScrollView-->
-<!--android:layout_width="match_parent"-->
-<!--android:layout_height="match_parent">-->
-
-<!--<LinearLayout-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="match_parent"-->
-    <!--android:orientation="vertical">-->
-
-    <!--<ImageView-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="100dp"-->
-        <!--android:layout_gravity="center_horizontal"-->
-        <!--android:scaleType="centerCrop"-->
-        <!--android:layout_marginTop="2dp"-->
-        <!--android:layout_marginBottom="2dp"-->
-        <!--android:src="@drawable/main_card"/>-->
-
-    <!--<ImageView-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="100dp"-->
-        <!--android:layout_gravity="center_horizontal"-->
-        <!--android:scaleType="centerCrop"-->
-        <!--android:layout_marginTop="2dp"-->
-        <!--android:layout_marginBottom="2dp"-->
-        <!--android:src="@drawable/main_card"/>-->
-
-    <!--<ImageView-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="100dp"-->
-        <!--android:layout_gravity="center_horizontal"-->
-        <!--android:scaleType="centerCrop"-->
-        <!--android:layout_marginTop="2dp"-->
-        <!--android:layout_marginBottom="2dp"-->
-        <!--android:src="@drawable/main_card"/>-->
-
-    <!--<ImageView-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="100dp"-->
-        <!--android:layout_gravity="center_horizontal"-->
-        <!--android:scaleType="centerCrop"-->
-        <!--android:layout_marginTop="2dp"-->
-        <!--android:layout_marginBottom="2dp"-->
-        <!--android:src="@drawable/main_card"/>-->
-
-    <!--<ImageView-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="100dp"-->
-        <!--android:layout_gravity="center_horizontal"-->
-        <!--android:scaleType="centerCrop"-->
-        <!--android:layout_marginTop="2dp"-->
-        <!--android:layout_marginBottom="2dp"-->
-        <!--android:src="@drawable/main_card"/>-->
-
-
-<!--</LinearLayout>-->
-
-
-<!--</ScrollView>-->
