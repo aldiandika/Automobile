@@ -16,7 +16,7 @@ import android.widget.ListView;
 public class Act_home extends AppCompatActivity {
 
     View decorView;
-    ImageButton btn_repair;
+    LinearLayout btn_repair;
 //    RecyclerView recyclerViewH;
 //    RecyclerView.LayoutManager layoutManagerH;
 //    RecyclerView.Adapter adapterH;
@@ -29,7 +29,7 @@ public class Act_home extends AppCompatActivity {
 
         decorView = getWindow().getDecorView();
 
-//        btn_repair = (ImageButton) findViewById(R.id.btn_repair);
+        btn_repair = (LinearLayout) findViewById(R.id.btn_repair);
 //        direk = (ImageView) findViewById(R.id.direk);
 
 //        recyclerViewH = (RecyclerView) findViewById(R.id.tampil);
@@ -44,12 +44,17 @@ public class Act_home extends AppCompatActivity {
     }
 
     public void toRepair(View view){
-        Intent intent = new Intent(this,Act_repair1.class);
+        Intent intent = new Intent(this,Act_repairCar.class);
         startActivity(intent);
     }
 
     public void toDirect(View view){
         Intent intent = new Intent(this,Act_direct.class);
+        startActivity(intent);
+    }
+
+    public void toGarage(View view){
+        Intent intent = new Intent(this,Act_garage.class);
         startActivity(intent);
     }
 

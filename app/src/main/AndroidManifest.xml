@@ -5,10 +5,10 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
+        android:label="Auto Mobile"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:label="Auto Mobile"
-        android:theme="@style/Theme.AppCompat.Light">
+        android:theme="@style/AppTheme">
         <activity
             android:name=".SplashAct"
             android:theme="@style/SplashTheme">
@@ -18,45 +18,60 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginAct"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+        <activity
+            android:name=".LoginAct"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity android:name=".Act_home" />
-
-        <activity android:name=".Act_repair1"
+        <activity
+            android:name=".Act_repair1"
             android:label="Repair Request"
             android:parentActivityName=".Act_home">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Act_home" />
         </activity>
-
-        <activity android:name=".Act_repair2"
+        <activity
+            android:name=".Act_repair2"
             android:label="Repair Request"
             android:parentActivityName=".Act_home">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Act_home" />
         </activity>
-
-
-        <activity android:name=".Act_repair3"
+        <activity
+            android:name=".Act_repair3"
             android:label="Repair Request"
             android:parentActivityName=".Act_home">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Act_home" />
         </activity>
-
-        <activity android:name=".Act_repair4"
+        <activity
+            android:name=".Act_repair4"
             android:label="Repair Request"
             android:parentActivityName=".Act_home">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Act_home" />
         </activity>
-
-        <activity android:name=".Act_direct"
+        <activity
+            android:name=".Act_direct"
             android:label="Get Direction"
+            android:parentActivityName=".Act_home">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Act_home" />
+        </activity>
+        <activity
+            android:name=".Act_repairCar"
+            android:label="CAR REPAIR"
+            android:parentActivityName=".Act_home">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Act_home" />
+        </activity>
+        <activity android:name=".Act_garage"
+            android:label="GARAGE"
             android:parentActivityName=".Act_home">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

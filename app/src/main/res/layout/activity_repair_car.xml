@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#FFFFFF"
+    tools:context="com.example.aldiandika.automobile.Act_repairCar">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="450dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/repair_mobil1"/>
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="26dp"
+        android:background="@drawable/btn_rounded"
+        android:text="PROCEED to checklist"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"/>
+</LinearLayout>

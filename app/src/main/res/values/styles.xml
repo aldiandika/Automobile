@@ -13,7 +13,7 @@
     </style>
 
     <style name="AppTheme.ActionBar.TitleTextStyle" parent="@android:style/TextAppearance.WindowTitle">
-        <item name="android:textColor">@android:color/darker_gray</item>
+        <item name="android:textColor">#FFFFFF</item>
     </style>
 
     <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
