@@ -70,8 +70,16 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Act_home" />
         </activity>
-        <activity android:name=".Act_garage"
+        <activity
+            android:name=".Act_garage"
             android:label="GARAGE"
+            android:parentActivityName=".Act_home">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Act_home" />
+        </activity>
+        <activity android:name=".Act_market"
+            android:label="MARKETPLACE"
             android:parentActivityName=".Act_home">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

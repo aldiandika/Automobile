@@ -58,6 +58,11 @@ public class Act_home extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void toMarket(View view){
+        Intent intent = new Intent(this,Act_market.class);
+        startActivity(intent);
+    }
+
     @Override
     public void onBackPressed() {
 //        super.onBackPressed();
