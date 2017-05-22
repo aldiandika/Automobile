@@ -1,10 +1,12 @@
 package com.example.aldiandika.automobile;
 
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.ImageButton;
 
 public class Act_garage extends AppCompatActivity {
 
@@ -12,10 +14,17 @@ public class Act_garage extends AppCompatActivity {
     RecyclerView.LayoutManager layoutManagerGar;
     RecyclerView.Adapter adapterGar;
     View decorView;
+    ImageButton navi_back;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_garage);
+
+        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setCustomView(R.layout.layout_action_garage);
+
+        navi_back = (ImageButton)findViewById(R.id.navi_back);
 
         decorView = getWindow().getDecorView();
 
@@ -28,6 +37,9 @@ public class Act_garage extends AppCompatActivity {
         recyclerViewGar.setAdapter(adapterGar);
     }
 
+    public void backAct(View view){
+        finish();
+    }
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);

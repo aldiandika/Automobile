@@ -1,6 +1,7 @@
 package com.example.aldiandika.automobile;
 
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -27,10 +28,14 @@ public class Act_home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_act_home);
 
+        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setCustomView(R.layout.layout_action);
+
         decorView = getWindow().getDecorView();
 
         btn_repair = (LinearLayout) findViewById(R.id.btn_repair);
-//        direk = (ImageView) findViewById(R.id.direk);
+        direk = (ImageView) findViewById(R.id.direk);
+
 
 //        recyclerViewH = (RecyclerView) findViewById(R.id.tampil);
 //

@@ -7,22 +7,28 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class Act_repairCar extends AppCompatActivity {
 
     View decorView;
-    android.support.v7.app.ActionBar actionBar;
+    ImageButton navi_back;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_repair_car);
         decorView = getWindow().getDecorView();
 
-        actionBar = getSupportActionBar();
-        actionBar.setIcon(R.drawable.logo_actionbar);
+        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setCustomView(R.layout.layout_action_repair);
 
+        navi_back = (ImageButton)findViewById(R.id.navi_back);
+    }
 
+    public void backAct(View view){
+        finish();
     }
 
     @Override

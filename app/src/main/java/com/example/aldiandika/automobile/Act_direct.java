@@ -1,19 +1,31 @@
 package com.example.aldiandika.automobile;
 
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
 
 public class Act_direct extends AppCompatActivity {
 
     View decorView;
+    ImageButton navi_back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_direct);
 
+        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setCustomView(R.layout.layout_action_dir);
+
+        navi_back = (ImageButton)findViewById(R.id.navi_back);
+
         decorView = getWindow().getDecorView();
+    }
+
+    public void backAct(View view){
+        finish();
     }
 
     @Override

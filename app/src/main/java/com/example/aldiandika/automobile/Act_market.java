@@ -1,11 +1,13 @@
 package com.example.aldiandika.automobile;
 
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.ImageButton;
 
 public class Act_market extends AppCompatActivity {
 
@@ -13,11 +15,17 @@ public class Act_market extends AppCompatActivity {
     RecyclerView.LayoutManager layoutManagerMar;
     RecyclerView.Adapter adapterMar;
     View decorView;
+    ImageButton navi_back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_market);
+
+        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setCustomView(R.layout.layout_action_marketplace);
+
+        navi_back = (ImageButton)findViewById(R.id.navi_back);
 
         decorView = getWindow().getDecorView();
 
@@ -28,6 +36,10 @@ public class Act_market extends AppCompatActivity {
 
         adapterMar = new RecyclerAdapterMar();
         recyclerViewMar.setAdapter(adapterMar);
+    }
+
+    public void backAct(View view){
+        finish();
     }
 
     @Override
