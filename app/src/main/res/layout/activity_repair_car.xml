@@ -9,11 +9,133 @@
     android:background="#FFFFFF"
     tools:context="com.example.aldiandika.automobile.Act_repairCar">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="450dp"
-        android:scaleType="centerInside"
-        android:src="@drawable/repair_mobil1"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="450dp">
+
+        <ImageView
+            android:id="@+id/mobilTot"
+            android:layout_width="wrap_content"
+            android:layout_height="450dp"
+            android:layout_centerInParent="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/repair_mobil1" />
+
+        <!--kiri atas-->
+        <ImageView
+            android:id="@+id/kiriAtas"
+            android:layout_width="100dp"
+            android:layout_height="135dp"
+            android:layout_alignLeft="@+id/mobilTot"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/mobilTot"
+            android:layout_marginLeft="9dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="6dp"
+            android:src="@drawable/mobil_kiriatas" />
+
+        <!--kanan atas-->
+        <ImageView
+            android:id="@+id/kananAtas"
+            android:layout_width="100dp"
+            android:layout_height="135dp"
+            android:layout_alignEnd="@+id/mobilTot"
+            android:layout_alignRight="@+id/mobilTot"
+            android:layout_alignTop="@+id/kiriAtas"
+            android:layout_marginEnd="9dp"
+            android:layout_marginRight="9dp"
+            android:src="@drawable/mobil_kananatas" />
+
+        <!--kap mobil-->
+        <ImageView
+            android:id="@+id/kapMobil"
+            android:layout_width="140dp"
+            android:layout_height="100dp"
+            android:layout_alignTop="@+id/kiriAtas"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="1dp"
+            android:src="@drawable/mobil_kap" />
+
+        <!--depan mobil-->
+        <ImageView
+            android:id="@+id/depanMobil"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/kapMobil"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="78dp"
+            android:src="@drawable/mobil_depan" />
+
+        <!--atap mobil-->
+        <ImageView
+            android:id="@+id/atapMobil"
+            android:layout_width="120dp"
+            android:layout_height="200dp"
+            android:layout_below="@+id/kiriAtas"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/mobil_atap" />
+
+        <!--btn kiri atas-->
+        <Button
+            android:id="@+id/btn_kiriAtas"
+            android:layout_width="30dp"
+            android:layout_height="90dp"
+            android:layout_alignBottom="@+id/kiriAtas"
+            android:layout_marginBottom="14dp"
+            android:layout_toLeftOf="@+id/kapMobil"
+            android:layout_toStartOf="@+id/kapMobil"
+            android:background="@android:color/transparent"
+            android:onClick="tampilKir"/>
+
+        <!--btn kanan atas-->
+        <Button
+            android:id="@+id/btn_kananAtas"
+            android:layout_width="30dp"
+            android:layout_height="90dp"
+            android:layout_alignBottom="@+id/btn_kiriAtas"
+            android:layout_alignTop="@+id/btn_kiriAtas"
+            android:layout_toEndOf="@+id/kapMobil"
+            android:layout_toRightOf="@+id/kapMobil"
+            android:background="@android:color/transparent"
+            android:onClick="tampilKan"/>
+
+        <!--btn kap-->
+        <Button
+            android:id="@+id/btn_kap"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:layout_alignTop="@+id/kapMobil"
+            android:layout_alignLeft="@+id/atapMobil"
+            android:layout_alignStart="@+id/atapMobil"
+            android:layout_marginTop="19dp"
+            android:background="@android:color/transparent"
+            android:onClick="tampilKap"/>
+
+        <!--btn depan-->
+        <Button
+            android:id="@+id/btn_depan"
+            android:layout_width="100dp"
+            android:layout_height="25dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@android:color/transparent"
+            android:onClick="tampilDep"/>
+
+        <!--btn atap-->
+        <Button
+            android:id="@+id/btn_atap"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_marginBottom="24dp"
+            android:layout_alignBottom="@+id/atapMobil"
+            android:layout_alignLeft="@+id/btn_depan"
+            android:layout_alignStart="@+id/btn_depan"
+            android:background="@android:color/transparent"
+            android:onClick="tampilAtap"/>
+
+    </RelativeLayout>
+
 
     <Button
         android:layout_width="200dp"
